@@ -1,0 +1,10 @@
+h1 {
+  padding: 1rem;
+  text-align: center;
+  line-break: auto;
+  font-size: 4rem;
+  font-weight: 900;
+}
+span {
+  color: #f9c005;
+}
