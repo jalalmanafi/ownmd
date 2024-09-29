@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import PreviewColumn from "@/components/PreviewColumn";
+// import PreviewColumn from "@/components/PreviewColumn";
 import MarkdownEditor from "@/components/MarkdownEditor";
 
 import "./style.css";
