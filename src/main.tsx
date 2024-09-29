@@ -6,11 +6,15 @@ import router from "./routes";
 
 import "./index.css";
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <Suspense fallback={<>Loading....</>}>
-    <RouterProvider router={router} fallbackElement={<>Loading....</>}/>
+const env = import.meta.env.MODE;
+
+const AppContent = (
+  <Suspense fallback={<>Loading....</>}>
+    <RouterProvider router={router} fallbackElement={<>Loading....</>} />
     <Outlet />
-    </Suspense>
-  </StrictMode>
+  </Suspense>
+);
+
+createRoot(document.getElementById("root")!).render(
+  env === "development" ? <StrictMode>{AppContent}</StrictMode> : AppContent
 );
