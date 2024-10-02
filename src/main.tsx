@@ -1,6 +1,8 @@
-import { StrictMode, Suspense } from "react";
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { NextUIProvider } from "@nextui-org/react";
 import { Outlet, RouterProvider } from "react-router-dom";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 import router from "./routes";
 
@@ -9,10 +11,12 @@ import "./index.css";
 const env = import.meta.env.MODE;
 
 const AppContent = (
-  <Suspense fallback={<>Loading....</>}>
-    <RouterProvider router={router} fallbackElement={<>Loading....</>} />
-    <Outlet />
-  </Suspense>
+  <NextUIProvider>
+    <NextThemesProvider attribute="class" defaultTheme="dark">
+      <RouterProvider router={router} />
+      <Outlet />
+    </NextThemesProvider>
+  </NextUIProvider>
 );
 
 createRoot(document.getElementById("root")!).render(

@@ -1,12 +1,11 @@
-import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
-const Home = lazy(() => import("@/pages/Home"));
-const Editor = lazy(() => import("@/pages/Editor"));
+import Home from "../pages/Home";
+import Editor from "../pages/Editor";
 
- const router = createBrowserRouter([
+const router = createBrowserRouter([
   {
-    path: "/",
+    index: true,
     element: <Home />,
   },
   {
@@ -15,4 +14,4 @@ const Editor = lazy(() => import("@/pages/Editor"));
   },
 ]);
 
-export default router
+export default router;
