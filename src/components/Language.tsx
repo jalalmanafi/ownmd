@@ -10,7 +10,6 @@ const Language = () => {
     <Select
       defaultSelectedKeys={[languages[1].key]}
       size="md"
-      className="max-w-md"
     >
       {languages.map((lang) => (
         <SelectItem key={lang.key}>{lang.label}</SelectItem>

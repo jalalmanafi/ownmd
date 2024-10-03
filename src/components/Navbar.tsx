@@ -21,7 +21,7 @@ const Navbar = () => {
         <Logo />
       </NavbarBrand>
       <NavbarContent className="w-full gap-4" justify="end">
-        <NavbarItem className="w-1/5">
+        <NavbarItem className="w-1/4">
           <Language />
         </NavbarItem>
         <NavbarItem>
