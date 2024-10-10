@@ -10,6 +10,7 @@ import "./index.css";
 
 const env = import.meta.env.MODE;
 
+
 const AppContent = (
   <NextUIProvider>
     <NextThemesProvider>

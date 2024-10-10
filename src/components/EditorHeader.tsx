@@ -9,10 +9,10 @@ import {
   SelectItem,
 } from "@nextui-org/react";
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 import Logo from "./Logo";
 import { SectionType } from "../ts/models";
-import { useSearchParams } from "react-router-dom";
 
 interface Props {
   markdown: string;

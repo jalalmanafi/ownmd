@@ -1,8 +1,8 @@
-import { Link } from "@nextui-org/react";
+import { Link } from "react-router-dom";
 
 const Logo = () => {
   return (
-    <Link href="/" className="text-inherit hover:opacity-1">
+    <Link to="/" className="text-inherit hover:opacity-1">
       <h1 className="inline-block bg-gradient-to-r -indent-2 text-4xl lg:text-6xl font-[900]">
         Own
       </h1>
