@@ -8,16 +8,20 @@ import {
   Select,
   SelectItem,
 } from "@nextui-org/react";
+import { useEffect, useState } from "react";
 
 import Logo from "./Logo";
-import { useState } from "react";
+import { SectionType } from "../ts/models";
+import { useSearchParams } from "react-router-dom";
 
 interface Props {
   markdown: string;
+  sections:SectionType[];
 }
 
-const EditorHeader = ({ markdown }: Props) => {
+const EditorHeader = ({ markdown,sections }: Props) => {
   const [section, setSection] = useState("");
+  const [,setSearchParams] = useSearchParams()
 
   const downloadMarkdownFile = () => {
     const a = document.createElement("a");
@@ -27,20 +31,9 @@ const EditorHeader = ({ markdown }: Props) => {
     a.click();
   };
 
-  console.log(section);
-
-  const sections = [
-    { value: "acknowledgements", label: "Acknowledgements" },
-    { value: "api_reference", label: "API Reference" },
-    { value: "usage", label: "Usage" },
-    { value: "installation", label: "Installation" },
-    { value: "features", label: "Features" },
-    { value: "screenshots", label: "Screenshots" },
-    { value: "configuration", label: "Configuration" },
-    { value: "contributing", label: "Contributing" },
-    { value: "roadmap", label: "Roadmap" },
-    { value: "license", label: "License" },
-  ];
+  useEffect(()=>{
+    setSearchParams({section})
+  },[section])
 
   return (
     <Navbar position="sticky" isBordered maxWidth="full">
