@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar";
+import HomeHeader from "../components/HomeHeader";
 import Support from "../components/Support";
 import BannerText from "../components/BannerText";
 import Repository from "../components/Repository";
@@ -7,7 +7,7 @@ import GetStarted from "../components/GetStarted";
 const Home = () => {
   return (
     <>
-      <Navbar />
+      <HomeHeader />
       <div className="flex flex-col items-center justify-evenly gap-6">
         <BannerText />
         <GetStarted/>

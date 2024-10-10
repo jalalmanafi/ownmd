@@ -12,7 +12,7 @@ const env = import.meta.env.MODE;
 
 const AppContent = (
   <NextUIProvider>
-    <NextThemesProvider attribute="class" defaultTheme="dark">
+    <NextThemesProvider>
       <RouterProvider router={router} />
       <Outlet />
     </NextThemesProvider>

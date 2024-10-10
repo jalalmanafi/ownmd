@@ -11,7 +11,7 @@ import Logo from "./Logo";
 import Language from "./Language";
 import { useState } from "react";
 
-const Navbar = () => {
+const HomeHeader = () => {
 
   const [darkTheme,setDarkTheme] = useState(true)
 
@@ -37,4 +37,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default HomeHeader;

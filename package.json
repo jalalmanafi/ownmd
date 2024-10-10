@@ -10,7 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@codemirror/lang-markdown": "^6.3.0",
+    "@codemirror/language-data": "^6.5.1",
     "@nextui-org/react": "^2.4.8",
+    "@uiw/react-codemirror": "^4.23.5",
+    "@uiw/react-markdown-preview": "^5.1.3",
     "dompurify": "^3.1.7",
     "framer-motion": "^11.9.0",
     "i18next": "^23.15.1",
@@ -20,6 +24,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-i18next": "^15.0.2",
+    "react-resizable-panels": "^2.1.4",
     "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
