@@ -1,20 +1,20 @@
 import { SectionType } from "../../ts/models";
 
 export const sections: SectionType[] = [
-    {
-      value: "title_and_description",
-      label: "Title and Description",
-      markdown: `
+  {
+    value: "title_and_description",
+    label: "Title and Description",
+    markdown: `
 # Project Title
 
 A brief description of what this project does and who it's for
 
 `,
-    },
-    {
-      value: "acknowledgements",
-      label: "Acknowledgements",
-      markdown: `
+  },
+  {
+    value: "acknowledgements",
+    label: "Acknowledgements",
+    markdown: `
 ## Acknowledgements
 
 - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
@@ -22,11 +22,11 @@ A brief description of what this project does and who it's for
 - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
 
 `,
-    },
-    {
-      value: "api_reference",
-      label: "API Reference",
-      markdown: `
+  },
+  {
+    value: "api_reference",
+    label: "API Reference",
+    markdown: `
 ## API Reference
 
 #### Get all items
@@ -54,11 +54,11 @@ A brief description of what this project does and who it's for
 Takes two numbers and returns the sum.
 
 `,
-    },
-    {
-      value: "usage",
-      label: "Usage",
-      markdown: `
+  },
+  {
+    value: "usage",
+    label: "Usage",
+    markdown: `
 ## Usage/Examples
 
 \`\`\`javascript
@@ -70,11 +70,11 @@ function App() {
 \`\`\`
 
 `,
-    },
-    {
-      value: "installation",
-      label: "Installation",
-      markdown: `
+  },
+  {
+    value: "installation",
+    label: "Installation",
+    markdown: `
 ## Installation
 
 Install my-project with npm
@@ -84,11 +84,11 @@ Install my-project with npm
   cd my-project
 \`\`\`
 `,
-    },
-    {
-      value: "features",
-      label: "Features",
-      markdown: `
+  },
+  {
+    value: "features",
+    label: "Features",
+    markdown: `
 ## Features
 
 - Light/dark mode toggle
@@ -97,22 +97,22 @@ Install my-project with npm
 - Cross platform
 
 `,
-    },
-    {
-      value: "screenshots",
-      label: "Screenshots",
-      markdown: `
+  },
+  {
+    value: "screenshots",
+    label: "Screenshots",
+    markdown: `
 ## Screenshots
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 `,
-    },
-    { value: "configuration", label: "Configuration", markdown: "" },
-    {
-      value: "contributing",
-      label: "Contributing",
-      markdown: `
+  },
+  { value: "configuration", label: "Configuration", markdown: "" },
+  {
+    value: "contributing",
+    label: "Contributing",
+    markdown: `
 ## Contributing
 
 Contributions are always welcome!
@@ -122,11 +122,11 @@ See \`contributing.md\` for ways to get started.
 Please adhere to this project's \`code of conduct\`.
 
 `,
-    },
-    {
-      value: "roadmap",
-      label: "Roadmap",
-      markdown: `
+  },
+  {
+    value: "roadmap",
+    label: "Roadmap",
+    markdown: `
 ## Roadmap
 
 - Additional browser support
@@ -134,15 +134,15 @@ Please adhere to this project's \`code of conduct\`.
 - Add more integrations
 
 `,
-    },
-    {
-      value: "license",
-      label: "License",
-      markdown: `
+  },
+  {
+    value: "license",
+    label: "License",
+    markdown: `
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
 `,
-    },
-  ];
+  },
+];

@@ -1,5 +1,5 @@
-import HomeHeader from "../components/HomeHeader";
 import Support from "../components/Support";
+import HomeHeader from "../components/HomeHeader";
 import BannerText from "../components/BannerText";
 import Repository from "../components/Repository";
 import GetStarted from "../components/GetStarted";
@@ -10,7 +10,7 @@ const Home = () => {
       <HomeHeader />
       <div className="flex flex-col items-center justify-evenly gap-6">
         <BannerText />
-        <GetStarted/>
+        <GetStarted />
       </div>
       <div className="w-full absolute bottom-20 flex px-40">
         <Repository />

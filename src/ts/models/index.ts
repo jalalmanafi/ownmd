@@ -1,5 +1,5 @@
 export interface SectionType {
-label:string,
-value:string,
-markdown:string
+  label: string;
+  value: string;
+  markdown: string;
 }

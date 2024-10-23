@@ -12,8 +12,7 @@ import Language from "./Language";
 import { useState } from "react";
 
 const HomeHeader = () => {
-
-  const [darkTheme,setDarkTheme] = useState(true)
+  const [darkTheme, setDarkTheme] = useState(true);
 
   return (
     <NextNavbar className="h-[10vh]" position="sticky" isBordered maxWidth="xl">
@@ -25,10 +24,15 @@ const HomeHeader = () => {
           <Language />
         </NavbarItem>
         <NavbarItem>
-          <Switch isSelected={darkTheme} onValueChange={setDarkTheme} classNames={{
-            wrapper:darkTheme ? "from-[#5EA2EF] to-[#0072F5] bg-gradient-to-b" : ''
-          }}
-            startContent={<Sun/>}
+          <Switch
+            isSelected={darkTheme}
+            onValueChange={setDarkTheme}
+            classNames={{
+              wrapper: darkTheme
+                ? "from-[#5EA2EF] to-[#0072F5] bg-gradient-to-b"
+                : "",
+            }}
+            startContent={<Sun />}
             endContent={<Moon />}
           />
         </NavbarItem>
