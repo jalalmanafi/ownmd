@@ -1,14 +1,14 @@
-import {  useState } from "react";
+import { useState } from "react";
 import CodeMirror from "@uiw/react-codemirror";
 import { languages } from "@codemirror/language-data";
 import MarkdownPreview from "@uiw/react-markdown-preview";
 import { markdown, markdownLanguage } from "@codemirror/lang-markdown";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 
+import { sections } from "../static/data";
 import EditorHeader from "../components/EditorHeader";
 
 import "./Editor.css";
-import { sections } from "../static/data";
 
 const markdownLangSetup = {
   base: markdownLanguage,
@@ -20,7 +20,7 @@ const Editor = () => {
 
   return (
     <div className="h-screen">
-      <EditorHeader markdown={markdownContent}  />
+      <EditorHeader markdown={markdownContent} />
       <PanelGroup direction="horizontal">
         <Panel defaultSize={50} minSize={25}>
           <CodeMirror

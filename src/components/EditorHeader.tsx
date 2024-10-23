@@ -14,7 +14,6 @@ interface Props {
 }
 
 const EditorHeader = ({ markdown }: Props) => {
-
   const downloadMarkdownFile = () => {
     const a = document.createElement("a");
     const blob = new Blob([markdown]);
@@ -23,16 +22,13 @@ const EditorHeader = ({ markdown }: Props) => {
     a.click();
   };
 
-
   return (
     <Navbar position="sticky" isBordered maxWidth="full">
       <NavbarBrand>
         <Logo />
       </NavbarBrand>
       <NavbarContent className="w-full gap-4" justify="end">
-        <NavbarItem className="w-1/3">
-     Something
-        </NavbarItem>
+        <NavbarItem className="w-1/3">Something</NavbarItem>
         <NavbarItem>
           <Button
             className="from-[#5EA2EF] to-[#0072F5] bg-gradient-to-b"
