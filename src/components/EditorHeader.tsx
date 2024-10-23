@@ -5,23 +5,15 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Select,
-  SelectItem,
 } from "@nextui-org/react";
-import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
 
 import Logo from "./Logo";
-import { SectionType } from "../ts/models";
 
 interface Props {
   markdown: string;
-  sections:SectionType[];
 }
 
-const EditorHeader = ({ markdown,sections }: Props) => {
-  const [section, setSection] = useState("");
-  const [,setSearchParams] = useSearchParams()
+const EditorHeader = ({ markdown }: Props) => {
 
   const downloadMarkdownFile = () => {
     const a = document.createElement("a");
@@ -31,9 +23,6 @@ const EditorHeader = ({ markdown,sections }: Props) => {
     a.click();
   };
 
-  useEffect(()=>{
-    setSearchParams({section})
-  },[section])
 
   return (
     <Navbar position="sticky" isBordered maxWidth="full">
@@ -42,15 +31,7 @@ const EditorHeader = ({ markdown,sections }: Props) => {
       </NavbarBrand>
       <NavbarContent className="w-full gap-4" justify="end">
         <NavbarItem className="w-1/3">
-          <Select
-            defaultSelectedKeys={[sections[1].value]}
-            size="lg"
-            onChange={(e) => setSection(e.target.value)}
-          >
-            {sections.map((section) => (
-              <SelectItem key={section.value}>{section.label}</SelectItem>
-            ))}
-          </Select>
+     Something
         </NavbarItem>
         <NavbarItem>
           <Button
