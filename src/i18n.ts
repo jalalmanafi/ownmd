@@ -7,11 +7,15 @@ i18n.use(initReactI18next).init({
     en: {
       translation: {
         banner: "Start To Create Your <ownmd>Own .MD</ownmd> file",
+        getStarted:'Get started',
+        beer:'Beer'
       },
     },
     az: {
       translation: {
         banner: "Öz <ownmd>Own .MD</ownmd> faylınızı yaradın",
+        getStarted:'Başlayın',
+        beer:'Pivə'
       },
     },
   },
