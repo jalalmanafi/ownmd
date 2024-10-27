@@ -5,6 +5,7 @@ import { Outlet, RouterProvider } from "react-router-dom";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 import router from "./routes";
+import './i18n'
 
 import "./index.css";
 
