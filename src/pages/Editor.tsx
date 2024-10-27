@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState, useRef } from "react";
 import CodeMirror from "@uiw/react-codemirror";
+import { useSearchParams } from "react-router-dom";
 import { languages } from "@codemirror/language-data";
 import MarkdownPreview from "@uiw/react-markdown-preview";
 import { markdown, markdownLanguage } from "@codemirror/lang-markdown";
@@ -16,7 +17,47 @@ const markdownLangSetup = {
 };
 
 const Editor = () => {
-  const [markdownContent, setMarkdownContent] = useState(sections[2].markdown);
+  const [markdownContent, setMarkdownContent] = useState("");
+  const [searchParams] = useSearchParams();
+  const previousSections = useRef<string[]>([]);
+
+  const selectedSections = useMemo(
+    () =>
+      searchParams.get("selectedSections")?.split(",").filter(Boolean) || [],
+    [searchParams]
+  );
+
+  const filteredMarkdown = useMemo(
+    () =>
+      sections
+        .filter((item) => selectedSections.includes(item.value))
+        .map((item) => item.markdown),
+    [selectedSections]
+  );
+
+  useEffect(() => {
+    if (!selectedSections.length) {
+      previousSections.current = [];
+      setMarkdownContent("");
+      return;
+    }
+
+    const newSections = filteredMarkdown
+      .filter((section) => !previousSections.current.includes(section))
+      .join("\n\n");
+
+    if (newSections.length > 0) {
+      setMarkdownContent((prev) =>
+        prev ? `${prev}\n\n${newSections}` : newSections
+      );
+    }
+
+    previousSections.current = filteredMarkdown;
+  }, [selectedSections, filteredMarkdown]);
+
+  const handleContentChange = (value: string) => {
+    setMarkdownContent(value);
+  };
 
   return (
     <div className="h-screen">
@@ -27,7 +68,7 @@ const Editor = () => {
             className="h-full"
             theme="dark"
             value={markdownContent}
-            onChange={setMarkdownContent}
+            onChange={handleContentChange}
             extensions={[markdown(markdownLangSetup)]}
           />
         </Panel>

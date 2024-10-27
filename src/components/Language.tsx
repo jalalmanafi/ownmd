@@ -7,7 +7,7 @@ const Language = () => {
   ];
 
   return (
-    <Select defaultSelectedKeys={[languages[1].key]} size="md">
+    <Select aria-label="Language" defaultSelectedKeys={[languages[1].key]} size="md">
       {languages.map((lang) => (
         <SelectItem key={lang.key}>{lang.label}</SelectItem>
       ))}
