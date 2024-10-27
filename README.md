@@ -87,4 +87,4 @@ Thanks to all contributors and users who help make OwnMD better!
 
 ---
 
-Made with ❤️ by the jalalmanafi
+Made with ❤️ and 🍻 by the jalalmanafi
